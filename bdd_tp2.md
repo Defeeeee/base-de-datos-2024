@@ -14,7 +14,7 @@ LIMIT 3;
 SELECT empleado.nombre, empleado.apellido, telefono.numero AS numero
 FROM empleado 
 JOIN telefono ON telefono.dni_duenio = empleado.dni
-WHERE empleado.id_sector = 1;
+WHERE empleado.id_sector = 1;;
 ```
 ### 4
 ```sql
