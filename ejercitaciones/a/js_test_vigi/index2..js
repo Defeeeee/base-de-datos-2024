@@ -66,5 +66,5 @@ const Alumnos = [
 ]
 
 const capitalizar = (string) => {
-    return string[0].toUpperCase() + string.substring(1)
+    return string[0].toUpperCase() + string.substring(1) // primera letra en mayus + lo demas de la string
 }

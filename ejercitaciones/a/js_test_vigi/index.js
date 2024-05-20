@@ -87,18 +87,17 @@ function capitalize(nombre) {
 }
 
 function mostrarAlumno(Alumno) {
-    console.log(
-`         DNI: ${String(Alumno.dni).substring(0,2)}.${String(Alumno.dni).substring(2,5)}.${String(Alumno.dni).substring(5,8)}
-         Nombre y Apellido: ${capitalize(Alumno.nombre)} ${capitalize(Alumno.apellido)}
-         Curso: ${Alumno.anio}°${Alumno.curso}
-         Nota: ${Alumno.nota}\n`
-    )
 
+
+    console.log("DNI: " + String(Alumno.dni).substring(0,2) + "." + String(Alumno.dni).substring(2,5) + "." + String(Alumno.dni).substring(5,8))
+    console.log("Nombre y Apellido: " + capitalize(Alumno.nombre) + " " + capitalize(Alumno.apellido))
+    console.log("Curso: " + Alumno.anio + "°" + Alumno.curso)
+    console.log("Nota: " + Alumno.nota + "\n")
 }
 
 
 ArrayAlumnos.forEach(mostrarAlumno)
-ArrayAlumnos.forEach((alumno) => (capitalize(alumno.nombre), capitalize(alumno.apellido)))
+ArrayAlumnos.forEach((alumno) => {alumno.nombre = capitalize(alumno.nombre); alumno.apellido = capitalize(alumno.apellido)})
 
 ArrayAlumnos.filter((alumno) => alumno.nota >= 6).forEach(mostrarAlumno)
 ArrayAlumnos.filter((alumno) => alumno.anio === 5).forEach(mostrarAlumno)
